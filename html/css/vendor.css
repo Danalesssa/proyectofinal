@@ -250,3 +250,8 @@ body.chocolat-open > .chocolat-image-wrapper {
 .chocolat-zoomable.chocolat-zooming-out .chocolat-img {
     transition: margin .2s ease;
 }
+.big-promo-img {
+    width: 600px; /* prueba 600–900px */
+    height: auto;
+    object-fit: contain;
+}

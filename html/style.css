@@ -720,3 +720,62 @@ h1,h2,h3,h4,h5,h6 {
     height: 740px;
   }
 }
+
+header img,
+.logo img,
+.navbar-brand img {
+    height: 120px !important;
+    width: auto !important;
+}
+
+.fenty-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.fenty-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 45%;      
+    height: 100%;
+
+    background-image: url("images/fentygloss.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+
+    pointer-events: none;
+}
+
+
+.chart-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 45%;      
+    height: 100%;
+
+    background-image: url("images/charpale.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+
+    pointer-events: none;
+}
+
+.header-icon {
+    width: 35px !important;
+    height: 35px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
