@@ -29,8 +29,9 @@ include("header.php");
 <!-- productos -->
 <section class="py-5">
     <div class="container-fluid">
-        <div class="section-header d-flex justify-content-between mb-4">
-            <h2 class="section-title">FENTY BEAUTY</h2>
+    
+        <div class="brand-banner text-center my-4">
+        <img src="images/fenty.png" alt="Fenty Beauty" class="brand-logo">
         </div>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">

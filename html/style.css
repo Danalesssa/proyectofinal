@@ -87,170 +87,76 @@ CSS STRUCTURE:
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
-:root {
-    /* widths for rows and containers
-     */
-    --header-height       : 160px;
-    --header-height-min   : 80px;
-}
-/* on mobile devices below 600px
- */
-@media screen and (max-width: 600px) {
-    :root {
-        --header-height : 100px;
-        --header-height-min   : 80px;
-    }
-}
-/* Theme Colors */
-:root {
-    --accent-color       : #FFC43F;
-    --dark-color         : #222222;
-    --light-dark-color   : #727272;
-    --light-color        : #fff;
-    --grey-color         : #dbdbdb;
-    --light-grey-color   : #fafafa;
-    --primary-color      : #6995B1;
-    --light-primary-color   : #eef1f3;
-}
+/*--------------------------------------------------------------*/
+/* 1. VARIABLES (PALETA SUBLIME MAKEUP STORE) */
+/*--------------------------------------------------------------*/
 
-/* Fonts */
 :root {
+
+    /* Colores principales del logo */
+    --sublime-rosa: #D83C8B;
+    --sublime-rosa-claro: #d17fb5dd;
+    --sublime-guinda: #6D0D32;
+    --sublime-amarillo: #ffedab;
+    --sublime-crema: #FFF7E5;
+
+    /* Aplicación a la plantilla */
+    --accent-color       : var(--sublime-rosa);
+    --dark-color         : var(--sublime-guinda);
+    --light-dark-color   : #8a5775; /* tono intermedio */
+    --light-color        : #ffffff;
+    --grey-color         : #e9dce7;
+    --light-grey-color   : var(--sublime-crema);
+
+    --primary-color      : var(--sublime-rosa);
+    --light-primary-color: var(--sublime-rosa-claro);
+
+    /* Tipografías */
     --body-font           : "Open Sans", sans-serif;
     --heading-font        : "Nunito", sans-serif;
 }
 
+/* Bootstrap overrides */
 body {
-  --bs-link-color: #333;
-  --bs-link-hover-color:#333;
 
-  --bs-link-color-rgb: 40,40,40;
-  --bs-link-hover-color-rgb: 0,0,0;
+  --bs-link-color: var(--sublime-guinda);
+  --bs-link-hover-color: var(--sublime-rosa);
 
-  /* --bs-link-color: #FFC43F;
-  --bs-link-hover-color: #FFC43F; */
+  --bs-body-color: #6a3d52;
 
-  --bs-light-rgb: 248, 248, 248;
+  --bs-primary: var(--sublime-rosa);
+  --bs-primary-rgb: 216, 60, 139;
 
-  --bs-font-sans-serif: "Open Sans", sans-serif;
-  --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
-  --bs-body-font-weight: 400;
-  --bs-body-line-height: 2;
-  --bs-body-color: #747474;
+  --bs-warning-bg-subtle: var(--sublime-amarillo);
 
-  --bs-primary: #FFC43F;
-  --bs-primary-rgb: 255, 196, 63;
+  --bs-light-rgb: 255,247,229;
 
-  --bs-success: #a3be4c;
-  --bs-success-rgb: 163, 190, 76;
-  
-  --bs-primary-bg-subtle: #FFF9EB;
-  --bs-success-bg-subtle: #eef5e5;
-  
-  --bs-border-color: #F7F7F7;
-
-  --bs-secondary-rgb: 230, 243, 251;
-  /* --bs-success-rgb: 238, 245, 228; */
-  --bs-danger-rgb: 249, 235, 231;
-  --bs-warning-rgb: 255, 249, 235;
-  --bs-info-rgb: 230, 243, 250;
+  --bs-info-rgb: 247,207,234;
 }
+
+/* BOTONES */
 .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #ffc43f;
-  --bs-btn-border-color: transparent;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #f7a422;
-  --bs-btn-hover-border-color: transparent;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #ffc43f;
-  --bs-btn-active-border-color: transparent;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #d3d7dd;
-  --bs-btn-disabled-border-color: transparent;
+  --bs-btn-bg: var(--sublime-rosa);
+  --bs-btn-hover-bg: var(--sublime-guinda);
 }
+
 .btn-outline-primary {
-  --bs-btn-color: #ffc43f;
-  --bs-btn-border-color: #ffc43f;
+  --bs-btn-color: var(--sublime-rosa);
+  --bs-btn-border-color: var(--sublime-rosa);
+  --bs-btn-hover-bg: var(--sublime-rosa);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #ffc107;
-  --bs-btn-hover-border-color: #ffc107;
-  --bs-btn-focus-shadow-rgb: 13,110,253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #ffc107;
-  --bs-btn-active-border-color: #ffc107;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff3cd;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #fff3cd;
-  --bs-gradient: none;
 }
-.btn-outline-light {
-  --bs-btn-color: #747474;
-  --bs-btn-border-color: #EFEFEF;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #EFEFEF;
-  --bs-btn-hover-border-color: #EFEFEF;
-  --bs-btn-focus-shadow-rgb: 248,249,250;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #EFEFEF;
-  --bs-btn-active-border-color: #EFEFEF;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #EFEFEF;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #EFEFEF;
-  --bs-gradient: none;
-}
+
 .btn-warning {
-  --bs-btn-color: #747474;
-  --bs-btn-bg: #FCF7EB;
-  --bs-btn-border-color: #FCF7EB;
-  --bs-btn-hover-color: #747474;
-  --bs-btn-hover-bg: #FFECBE;
-  --bs-btn-hover-border-color: #FFECBE;
-  --bs-btn-focus-shadow-rgb: 217,164,6;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #FFECBE;
-  --bs-btn-active-border-color: #FFECBE;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #FCF7EB;
-  --bs-btn-disabled-border-color: #FCF7EB;
+  --bs-btn-bg: var(--sublime-amarillo);
+  --bs-btn-hover-bg: #f3e3a7;
 }
+
 .btn-success {
-  --bs-btn-color: #222;
-  --bs-btn-bg: #EEF5E4;
-  --bs-btn-border-color: #EEF5E4;
-  --bs-btn-hover-color: #222;
-  --bs-btn-hover-bg: #9de3c2;
-  --bs-btn-hover-border-color: #9de3c2;
-  --bs-btn-focus-shadow-rgb: 60,153,110;
-  --bs-btn-active-color: #222;
-  --bs-btn-active-bg: #9de3c2;
-  --bs-btn-active-border-color: #9de3c2;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #222;
-  --bs-btn-disabled-bg: #EEF5E4;
-  --bs-btn-disabled-border-color: #EEF5E4;
+  --bs-btn-bg: var(--sublime-rosa-claro);
+  --bs-btn-hover-bg: var(--sublime-rosa);
 }
-.btn-danger {
-  --bs-btn-color: #222;
-  --bs-btn-bg: #FFEADA;
-  --bs-btn-border-color: #FFEADA;
-  --bs-btn-hover-color: #222;
-  --bs-btn-hover-bg: #ecc9af;
-  --bs-btn-hover-border-color: #ecc9af;
-  --bs-btn-focus-shadow-rgb: 60,153,110;
-  --bs-btn-active-color: #222;
-  --bs-btn-active-bg: #ecc9af;
-  --bs-btn-active-border-color: #ecc9af;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #222;
-  --bs-btn-disabled-bg: #FFEADA;
-  --bs-btn-disabled-border-color: #FFEADA;
-}
+
 body {
   letter-spacing: 0.03em;
 }
@@ -375,9 +281,9 @@ h1,h2,h3,h4,h5,h6 {
   overflow: hidden;
   border-radius: 12px;
 }
-.banner-ad.blue {
+/* .banner-ad.blue {
   background: #e6f3fb;
-}
+} */
 .banner-ad .swiper-pagination {
   bottom: 40px;
   left: 0;
@@ -392,23 +298,24 @@ h1,h2,h3,h4,h5,h6 {
   transition: background 0.3s ease-out;
 }
 .banner-ad .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
-  background: #FFC43F;
+  background: var(--sublime-rosa-claro);
 }
 .banner-ad .swiper-slide {
   min-height: 630px;
   display: flex;
 }
-/* .banner-ad .banner-content {
+.banner-ad .banner-content {
   padding: 52px;
 }
 .banner-ad.large .banner-content {
   padding: 90px;
-} */
+  background-color: #c6dbf9e3;
+} 
 .banner-ad .banner-content .categories {
   font-family: 'Garamond';
   font-size: 37px;
   text-transform: capitalize;
-  color: var(--dark-color);
+  color: var(--sublime-guinda);
 }
 .banner-ad .banner-content .sale {
   position: relative;
@@ -438,7 +345,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 33px;
 }
 .banner-ad.large .banner-content .categories {
-  color: var(--accent-color);
+  color: var(--sublime-guinda);
 }
 .banner-ad.large .banner-content .banner-title {
   font-size: 54px;
@@ -566,13 +473,23 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
 }
 .product-item figure {
-  background: #F9F9F9;
-  border-radius: 12px;
-  text-align: center;
+    height: 260px;            /* Altura fija del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F9F9F9;
+    border-radius: 12px;
+    overflow: hidden;
 }
+
 .product-item figure img {
-  max-height: 210px;
-  height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que todas se vean uniformes */
 }
 .product-item .btn-wishlist {
   position: absolute;
@@ -739,6 +656,7 @@ header img,
     top: 0;
     right: 0;
 
+
     width: 45%;      
     height: 100%;
 
@@ -754,6 +672,7 @@ header img,
 .chart-banner {
     position: relative;
     overflow: hidden;
+    background-color: #f6c0869d !important;
 }
 
 .chart-banner::after {
@@ -769,6 +688,7 @@ header img,
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center right;
+    
 
     pointer-events: none;
 }
@@ -779,3 +699,137 @@ header img,
     object-fit: contain !important;
     display: block !important;
 }
+/* Header color pastel */
+header {
+    background-color: var(--sublime-amarillo) !important;
+}
+/* ICONOS DEL HEADER (estilo limpio y sin bordes) */
+.header-icon-btn {
+    background-color: #ffffff !important; /* fondo blanco */
+    border: none !important;              /* sin bordes */
+    box-shadow: none !important;          /* sin borde falso */
+    border-radius: 20px !important;       /* opcional: esquinas redondeadas */
+    padding: 10px !important;
+    text-decoration: none !important;
+}
+
+.header-icon-btn:hover {
+    background-color: #fff5f9 !important; /* rosa pastel suave al hover */
+}
+
+.buscar-btn {
+    background-color: var(--sublime-rosa) !important; /* rosa pastel */
+    color: white !important;
+    border: none !important;
+    border-radius: 30px;
+    
+}
+
+.buscar-btn:hover {
+    background-color: var(--sublime-guinda) !important; /* un rosa un poquito más fuerte */
+}
+.input-group{
+  height: 70px;
+}
+.header-search {
+    margin-right: 10px !important;
+    max-width: 400px;  /* Ajusta el tamaño */
+    margin-left: auto;
+}
+.header-center {
+    background-color: var(--sublime-amarillo); /* amarillo pastel */
+    color: #B03060; /* rosa vino suave */
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in-out;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Suave animación */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Texto del header */
+#promo-text {
+    font-size: 18px;         /* Tamaño de letra */      /* Más gruesa */
+    color: VAR(--sublime-guinda);   
+    font-family: 'Garamond';  /* Tono inspirado en tu logo */     /* Más elegante */
+}
+
+.header-icon-btn{
+    font-size: 18px;         /* Tamaño de letra */
+    font-weight: 300;        /* Más gruesa */
+    font-family: 'Garamond', sans-serif;  /* Puedes cambiarla aquí */
+    color: var(--sublime-guinda);          /* Tono inspirado en tu logo */
+    letter-spacing: 1px; 
+    height:45px;
+}
+
+.btn-banner {
+    background-color: #d94f93;  /* rosa */
+    color: white;
+    border: none;
+}
+
+.btn-banner:hover {
+    background-color: #b83f7a;
+    color: white;
+}
+
+.banner-ad.large .img-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+    margin-top: 100px; /* BAJA la imagen */
+    /* o si usas transform: */
+    transform: scale(1.1);
+}
+
+.btn-dark {
+    background-color: #c84174 !important;
+    border-color: #c84174 !important;
+    color: #fff !important;
+}
+
+.btn-dark:hover {
+    background-color: #a92b5e !important;
+    border-color: #a92b5e !important;
+}
+.ver-todos-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #8A1E54; /* tono vino parecido al logo */
+    text-decoration: none;
+    transition: 0.3s ease;
+    letter-spacing: 0.03em;
+}
+
+.ver-todos-link:hover {
+    color: #C73E7B; /* rosita vino */
+    text-decoration: underline;
+}
+
+.ver-todos-link span {
+    font-size: 1.2rem;
+    margin-left: 4px;
+    
+}
+.brand-banner {
+    background: #db6d9974; /* tono amarillo pastel similar a tu header */
+    padding: 30px 0;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.brand-logo {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.1));
+}
+
+

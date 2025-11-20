@@ -5,17 +5,21 @@
                 <img src="images/logo.png" alt="logo" height="45">
             </a>
 
-            <form class="flex-grow-1 mx-3">
+            <form class="flex-grow-1 mx-3 header-search">
                 <div class="input-group">
                     <input type="search" class="form-control" placeholder="Buscar productos...">
-                    <button class="btn btn-dark">Buscar</button>
+                    <button class="btn buscar-btn">Buscar</button>
                 </div>
             </form>
+            <div class="header-center">
+                <span id="promo-text">10% DE DESCUENTO EN TU PRIMERA COMPRA</span>
+            </div>
+
 
             <div class="d-flex align-items-center gap-2">
-                <a href="login.php" class="btn btn-outline-secondary"><img src="images/login.png" class="header-icon"></a>
-                <a href="favoritos.php" class="btn btn-outline-secondary"><img src="images/corazon.png" class="header-icon"></a>
-                <a href="carrito.php" class="btn btn-outline-secondary"><img src="images/carrito.png" class="header-icon"></a>
+                <a href="login.php" class="header-icon-btn d-flex align-items-center justify-content-center">Iniciar Sesión</a>
+                <a href="favoritos.php" class="header-icon-btn d-flex align-items-center justify-content-center"><img src="images/corazon.png" class="header-icon"></a>
+                <a href="carrito.php" class="header-icon-btn d-flex align-items-center justify-content-center"><img src="images/carrito.png" class="header-icon"></a>
             </div>
         </div>
     </div>
@@ -33,7 +37,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Marcas</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="fenty.php">Fenty</a></li>
+                        <li><a class="dropdown-item" href="fenty.php">Fenty Beauty</a></li>
                         <li><a class="dropdown-item" href="rarebeauty.php">Rare Beauty</a></li>
                         <li><a class="dropdown-item" href="toofaced.php">Too Faced</a></li>
                         <li><a class="dropdown-item" href="glossier.php">Glossier</a></li>
@@ -50,3 +54,28 @@
         </div>
     </div>
 </nav>
+
+<script>
+const frases = [
+    "10% DE DESCUENTO EN TU PRIMERA COMPRA",
+    "REGALO EN COMPRAS MAYORES A $999",
+    "ENVÍOS A TODO MÉXICO",
+    "NUEVAS COLECCIONES CADA SEMANA",
+    "PRODUCTOS 100% ORIGINALES"
+];
+
+let indice = 0;
+
+setInterval(() => {
+    indice = (indice + 1) % frases.length;
+    
+    const promo = document.getElementById("promo-text");
+    promo.style.opacity = 0;
+
+    setTimeout(() => {
+        promo.textContent = frases[indice];
+        promo.style.opacity = 1;
+    }, 300);
+
+}, 3500);
+</script>

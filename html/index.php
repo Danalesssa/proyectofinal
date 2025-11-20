@@ -6,12 +6,16 @@ include("conexion.php");
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>BeautyMart - Maquillaje</title>
+    <title>Sublime MakeUp Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 <?php
@@ -39,7 +43,7 @@ include("header.php");
                                             <div class="categories my-3">NUEVO</div>
                                             <h3 class="display-4">Born This Way Foundation</h3>
                                             <p>Acabado natural con cobertura media-alta. Elige tu tono ideal.</p>
-                                            <a href="agregar_carrito.php?id=123" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
+                                            <a href="agregar_carrito.php?id=10" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/bornthisway.png" class="img-fluid">
@@ -54,7 +58,7 @@ include("header.php");
                                             <div class="categories my-3">TENDENCIA</div>
                                             <h3 class="display-4">Rare Beauty Soft Pinch Blush</h3>
                                             <p>El rubor líquido más viral. Natural, pigmentado y duradero.</p>
-                                            <a href="rarebeauty.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Ver marca</a>
+                                            <a href="rarebeauty.php" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Ver marca</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/softpinch.png" class="img-fluid">
@@ -69,7 +73,7 @@ include("header.php");
                                             <div class="categories my-3">COLECCIÓN</div>
                                             <h3 class="display-4">Paletas Huda Beauty</h3>
                                             <p>Sombras altamente pigmentadas para cualquier look.</p>
-                                            <a href="sombras.php" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explorar paletas</a>
+                                            <a href="categoria.php?tipo=Sombras" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explorar paletas</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/wildhuda.png" class="img-fluid">
@@ -92,7 +96,7 @@ include("header.php");
                                 <h3 class="banner-title">Labiales Fenty Beauty</h3>
                                 <a href="fenty.php" class="d-flex align-items-center nav-link">
                                     Ver Fenty Beauty
-                                    <svg width="24" height="24" class="ms-1"><use xlink:href="#arrow-right"></use></svg>
+                                    <svg width="24" height="24" class="ms-1"></svg>
                                 </a>
                             </div>
                         </div>
@@ -106,7 +110,7 @@ include("header.php");
                                 <h3 class="item-title">Charlotte Tilbury Nude Palette</h3>
                                 <a href="tilbury.php" class="d-flex align-items-center nav-link">
                                     Ver Charlotte Tilbury
-                                    <svg width="24" height="24" class="ms-1"><use xlink:href="#arrow-right"></use></svg>
+                                    <svg width="24" height="24" class="ms-1"></svg>
                                 </a>
                             </div>
                         </div>
@@ -151,9 +155,15 @@ include("header.php");
         <div class="section-header d-flex justify-content-between mb-4">
             <h2 class="section-title">Productos de Maquillaje</h2>
         </div>
+        <div class="text-end ver-todos-container">
+        <a href="todos.php" class="ver-todos-link">
+        Ver todos <span>&rarr;</span>
+        </a>
+        </div>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
             <?php
-            $query = "SELECT * FROM productos";
+            $query = "SELECT * FROM productos LIMIT 8";
             $resultado = $conexion->query($query);
 
             while ($producto = $resultado->fetch_assoc()):
