@@ -58,7 +58,7 @@ include("header.php");
                                             <div class="categories my-3">TENDENCIA</div>
                                             <h3 class="display-4">Rare Beauty Soft Pinch Blush</h3>
                                             <p>El rubor líquido más viral. Natural, pigmentado y duradero.</p>
-                                            <a href="rarebeauty.php" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Ver marca</a>
+                                            <a href="marca.php?nombre=Rare%20Beauty" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Ver marca</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/softpinch.png" class="img-fluid">
@@ -94,7 +94,7 @@ include("header.php");
                             <div class="content-wrapper col-md-7">
                                 <div class="categories sale mb-3 pb-3">COLECCIÓN</div>
                                 <h3 class="banner-title">Labiales Fenty Beauty</h3>
-                                <a href="fenty.php" class="d-flex align-items-center nav-link">
+                                <a href="marca.php?nombre=Fenty%20Beauty" class="d-flex align-items-center nav-link">
                                     Ver Fenty Beauty
                                     <svg width="24" height="24" class="ms-1"></svg>
                                 </a>
@@ -108,7 +108,7 @@ include("header.php");
                             <div class="content-wrapper col-md-7">
                                 <div class="categories sale mb-3 pb-3">TENDENCIA</div>
                                 <h3 class="item-title">Charlotte Tilbury Nude Palette</h3>
-                                <a href="tilbury.php" class="d-flex align-items-center nav-link">
+                                <a href="marca.php?nombre=Charlotte%20Tilbury" class="d-flex align-items-center nav-link">
                                     Ver Charlotte Tilbury
                                     <svg width="24" height="24" class="ms-1"></svg>
                                 </a>

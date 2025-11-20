@@ -24,7 +24,7 @@ $resultado = $conexion->query($query);
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Sublime Beauty</title>
+    <title>Sublime</title>
 </head>
 
 <body>
@@ -58,6 +58,7 @@ $resultado = $conexion->query($query);
         </div>
     </div>
 </section>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

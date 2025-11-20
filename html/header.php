@@ -31,22 +31,24 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        
+
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
                 <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Marcas</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="fenty.php">Fenty Beauty</a></li>
-                        <li><a class="dropdown-item" href="rarebeauty.php">Rare Beauty</a></li>
-                        <li><a class="dropdown-item" href="toofaced.php">Too Faced</a></li>
-                        <li><a class="dropdown-item" href="glossier.php">Glossier</a></li>
-                        <li><a class="dropdown-item" href="benefit.php">Benefit</a></li>
-                        <li><a class="dropdown-item" href="patrickta.php">Patrick Ta</a></li>
-                        <li><a class="dropdown-item" href="huda.php">Huda Beauty</a></li>
-                        <li><a class="dropdown-item" href="tilbury.php">Charlotte Tilbury</a></li>
-                        <li><a class="dropdown-item" href="mercier.php">Laura Mercier</a></li>
-                        <li><a class="dropdown-item" href="clinique.php">Clinique</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Fenty Beauty">Fenty</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Too Faced">Too Faced</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Rare Beauty">Rare Beauty</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Glossier">Glossier</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Benefit">Benefit</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Patrick Ta">Patrick Ta</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Huda Beauty">Huda Beauty</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Charlotte Tilbury">Charlotte Tilbury</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Laura Mercier">Laura Mercier</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Clinique">Clinique</a></li>
                     </ul>
                 </li>
             </ul>
@@ -79,3 +81,5 @@ setInterval(() => {
 
 }, 3500);
 </script>
+</body>
+</html>
