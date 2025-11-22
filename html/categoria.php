@@ -1,10 +1,8 @@
 <?php
+include("header.php");
 include("conexion.php");
 
-// Leer la categoría desde la URL
 $categoria = $_GET['tipo'] ?? '';
-
-// Consulta a la BD
 $query = "SELECT * FROM productos WHERE categoria = '$categoria'";
 $resultado = $conexion->query($query);
 ?>
@@ -14,25 +12,16 @@ $resultado = $conexion->query($query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 
-    <!-- TEMPLATE CSS -->
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Sublime</title>
 </head>
-
 <body>
-
-
-<body>
-
-<?php include("header.php"); ?> 
 
 <section class="py-5">
     <div class="container-fluid">

@@ -1,4 +1,5 @@
 <?php
+include("header.php");
 include("conexion.php");
 
 $marca = $_GET['nombre'] ?? '';
@@ -45,28 +46,22 @@ $logoMarca = $logos[$marca] ?? 'default_logo.png';
 
 <body>
 
-<?php include("header.php"); ?>
-
-<section class="py-5 text-center">
-    <img src="images/<?php echo $logoMarca; ?>" style="max-height: 130px;">
-</section>
-
 <section class="py-5">
     <div class="container-fluid">
-        <div class="row g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 
             <?php while ($producto = $resultado->fetch_assoc()): ?>
-            <div class="col-md-3">
-                <div class="product-item">
+            <div class="col">
+                <div class="product-item h-100">
                     <figure>
-                        <img src="images/<?php echo $producto['imagen']; ?>" class="img-fluid">
+                        <img src="images/<?php echo $producto['imagen']; ?>" class="tab-image">
                     </figure>
 
                     <h3><?php echo $producto['nombre_producto']; ?></h3>
 
                     <span class="price">$<?php echo number_format($producto['precio'], 2); ?></span>
 
-                    <a href="agregar_carrito.php?id=<?php echo $producto['id_producto']; ?>" class="btn btn-dark w-100 mt-2">
+                    <a href="agregar_carrito.php?id=<?php echo $producto['id_producto']; ?>" class="btn btn-dark w-100 mt-auto">
                         Agregar al carrito
                     </a>
                 </div>

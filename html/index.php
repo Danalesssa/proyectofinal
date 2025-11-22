@@ -1,4 +1,5 @@
 <?php
+include("header.php");
 include("conexion.php"); 
 ?>
 
@@ -18,9 +19,7 @@ include("conexion.php");
 
 </head>
 <body>
-<?php
-include("header.php");
-?>
+
 
 <!--banners-->
 
@@ -73,7 +72,7 @@ include("header.php");
                                             <div class="categories my-3">COLECCIÓN</div>
                                             <h3 class="display-4">Paletas Huda Beauty</h3>
                                             <p>Sombras altamente pigmentadas para cualquier look.</p>
-                                            <a href="categoria.php?tipo=Sombras" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explorar paletas</a>
+                                            <a href="categoria.php?tipo=Sombras" class="btn btn-banner btn-lg text-uppercase fs-6 rounded-1 px-4 py-3 mt-3">Explorar sombras</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/wildhuda.png" class="img-fluid">

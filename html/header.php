@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <header class="border-bottom">
     <div class="container-fluid py-3">
         <div class="d-flex flex-wrap align-items-center justify-content-between">
@@ -11,15 +17,29 @@
                     <button class="btn buscar-btn">Buscar</button>
                 </div>
             </form>
+
             <div class="header-center">
                 <span id="promo-text">10% DE DESCUENTO EN TU PRIMERA COMPRA</span>
             </div>
 
-
             <div class="d-flex align-items-center gap-2">
-                <a href="login.php" class="header-icon-btn d-flex align-items-center justify-content-center">Iniciar Sesión</a>
-                <a href="favoritos.php" class="header-icon-btn d-flex align-items-center justify-content-center"><img src="images/corazon.png" class="header-icon"></a>
-                <a href="carrito.php" class="header-icon-btn d-flex align-items-center justify-content-center"><img src="images/carrito.png" class="header-icon"></a>
+                <?php if (isset($_SESSION['usuario_id'])): ?>
+                    <a href="cuenta.php" class="header-icon-btn d-flex align-items-center justify-content-center">
+                        <span class="ms-2">Mi cuenta</span>
+                    </a>
+                <?php else: ?>
+                    <a href="login.php" class="header-icon-btn d-flex align-items-center justify-content-center">
+                        <span class="ms-2">Iniciar sesión</span>
+                    </a>
+                <?php endif; ?>
+
+                <a href="favoritos.php" class="header-icon-btn d-flex align-items-center justify-content-center">
+                    <img src="images/corazon.png" class="header-icon">
+                </a>
+
+                <a href="carrito.php" class="header-icon-btn d-flex align-items-center justify-content-center">
+                    <img src="images/carrito.png" class="header-icon">
+                </a>
             </div>
         </div>
     </div>
@@ -31,15 +51,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        
-
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-semibold">
                 <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Marcas</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="marca.php?nombre=Fenty Beauty">Fenty</a></li>
+                        <li><a class="dropdown-item" href="marca.php?nombre=Fenty Beauty">Fenty Beauty</a></li>
                         <li><a class="dropdown-item" href="marca.php?nombre=Too Faced">Too Faced</a></li>
                         <li><a class="dropdown-item" href="marca.php?nombre=Rare Beauty">Rare Beauty</a></li>
                         <li><a class="dropdown-item" href="marca.php?nombre=Glossier">Glossier</a></li>
@@ -52,6 +71,7 @@
                     </ul>
                 </li>
             </ul>
+
             <span class="text-muted small">Envíos a todo México</span>
         </div>
     </div>
@@ -81,5 +101,3 @@ setInterval(() => {
 
 }, 3500);
 </script>
-</body>
-</html>
