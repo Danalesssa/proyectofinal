@@ -2,7 +2,7 @@
 include("header.php");
 include("conexion.php");
 
-$categoria = $_GET['tipo'] ?? '';
+$categoria = $_GET['tipo'];
 $query = "SELECT * FROM productos WHERE categoria = '$categoria'";
 $resultado = $conexion->query($query);
 ?>
@@ -11,23 +11,16 @@ $resultado = $conexion->query($query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
     <link rel="stylesheet" type="text/css" href="css/vendor.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-
     <title>Sublime</title>
 </head>
 <body>
-
 <section class="py-5">
     <div class="container-fluid">
-
         <h2 class="section-title mb-4"><?= strtoupper($categoria) ?></h2>
-
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
             <?php while ($producto = $resultado->fetch_assoc()): ?>
             <div class="col">
@@ -35,10 +28,8 @@ $resultado = $conexion->query($query);
                     <figure>
                         <img src="images/<?= $producto['imagen'] ?>" class="tab-image">
                     </figure>
-
                     <h3><?= $producto['nombre_producto'] ?></h3>
                     <span class="price">$<?= number_format($producto['precio'], 2) ?></span>
-
                     <a href="agregar_carrito.php?id=<?= $producto['id_producto'] ?>"
                     class="btn btn-dark w-100 mt-2">Agregar al carrito</a>
                 </div>

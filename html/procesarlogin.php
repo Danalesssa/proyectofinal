@@ -7,11 +7,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['contrasena'];
 
-    $sql = "SELECT * FROM usuarios WHERE email = ?";
-    $stmt = $conexion->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $resultado = $stmt->get_result();
+    $query = "SELECT * FROM usuarios WHERE email = ?";
+    $cons = $conexion->prepare($query);
+    $cons->bind_param("s", $email);
+    $cons->execute();
+    $resultado = $cons->get_result();
 
     if ($resultado->num_rows === 1) {
         $usuario = $resultado->fetch_assoc();

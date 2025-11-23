@@ -2,8 +2,6 @@
 include("conexion.php");
 include("header.php")
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,17 +11,23 @@ include("header.php")
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
+<?php if (isset($_GET['error'])): ?>
+    <?php if ($_GET['error'] == 1): ?>
+        <div class="alert alert-danger text-center">
+            La contraseña es incorrecta.
+        </div>
+    <?php elseif ($_GET['error'] == 2): ?>
+        <div class="alert alert-danger text-center">
+            No existe una cuenta con ese correo.
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
 
-    
 <body class="bg-light">
-
 <div class="container d-flex justify-content-center align-items-center" style="min height: 100vh">
     <div class="card shadow p-4" style="width: 100%; max-width: 420px; border-radius: 16px;">
-
         <h3 class="text-center mb-4 fw-bold">Iniciar Sesión</h3>
-
         <form action="procesarlogin.php" method="POST">
 
             <div class="mb-3">

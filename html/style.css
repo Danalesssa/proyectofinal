@@ -1,96 +1,3 @@
-/*
-Theme Name: FoodMart
-Theme URI: https://templatesjungle.com/
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: FoodMart is specially designed product packaged for eCommerce store websites.
-Version: 1.1
-*/
-
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
-
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
-
-/*------------------------------------------------
-
-CSS STRUCTURE:
-
-1. VARIABLES
-
-2. GENERAL TYPOGRAPHY
-  2.1 General Styles
-  2.2 Floating & Alignment
-  2.3 Forms
-  2.4 Lists
-  2.5 Code
-  2.6 Tables
-  2.7 Spacing
-  2.8 Utilities
-  2.9 Misc
-    - Row Border
-    - Zoom Effect
-  2.10 Buttons
-    - Button Sizes
-    - Button Shapes
-    - Button Color Scheme
-    - Button Aligns
-  2.11 Section
-    - Hero Section
-    - Section Title
-    - Section Paddings
-    - Section Margins
-    - Section Bg Colors
-    - Content Colors
-    - Content Borders
-
-3. EXTENDED TYPOGRAPHY
-  3.1 Blockquote / Pullquote
-  3.2 Text Highlights
-
-4. CONTENT ELEMENTS
-  4.1 Tabs
-  4.2 Accordions
-  4.3 Brand Carousel
-  4.4 Category Carousel
-
-5. BLOG STYLES
-  5.1 Blog Single Post
-  5.2 About Author
-  5.3 Comments List
-  5.4 Comments Form3
-
-6. SITE STRUCTURE
-  6.1 Header
-    - Header Menu
-    - Nav Sidebar
-  6.2 Billboard
-  6.3 About Us Section
-  6.4 Video Section
-  6.5 Selling Products Section
-  6.6 Quotation Section
-  6.7 Latest Blogs Section
-  6.8 Newsletter Section
-  6.9 Instagram Section
-  6.10 Footer
-    - Footer Top
-    - Footer Bottom
-
-7. OTHER PAGES
-  7.1 Product detail
-  7.2 Shop page
-
-    
-/*--------------------------------------------------------------
-/** 1. VARIABLES
---------------------------------------------------------------*/
-/*--------------------------------------------------------------*/
-/* 1. VARIABLES (PALETA SUBLIME MAKEUP STORE) */
-/*--------------------------------------------------------------*/
-
 :root {
 
     /* Colores principales del logo */
@@ -173,82 +80,7 @@ h1,h2,h3,h4,h5,h6 {
 .display-6 {
   font-weight: 700;
 }
-.breadcrumb.text-white {
-  --bs-breadcrumb-divider-color: #fff;
-  --bs-breadcrumb-item-active-color: var(--bs-primary);
-}
-.dropdown-menu {
-  --bs-dropdown-link-active-bg: var(--bs-primary);
-}
-.nav-pills .nav-link {
-  --bs-nav-pills-link-active-color: #111;
-  --bs-nav-pills-link-active-bg: #f1f1f1;
-}
 
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  --bs-gutter-x: 3rem;
-}
-/*----------------------------------------------*/
-/* 6. SITE STRUCTURE */
-/*----------------------------------------------*/
-/* 6.1 Header
---------------------------------------------------------------*/
-/* Preloader */
-.preloader-wrapper {
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 111;
-  background: #fff;
-}
-
-.preloader-wrapper .preloader {
-  margin: 20% auto 0;
-  transform: translateZ(0);
-}
-
-.preloader:before,
-.preloader:after {
-  content: '';
-  position: absolute;
-  top: 0;
-}
-
-.preloader:before,
-.preloader:after,
-.preloader {
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  animation: animation 1.2s infinite ease-in-out;
-}
-
-.preloader {
-  animation-delay: -0.16s;
-}
-
-.preloader:before {
-  left: -3.5em;
-  animation-delay: -0.32s;
-}
-
-.preloader:after {
-  left: 3.5em;
-}
-
-@keyframes animation {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 2em 0 -1em var(--accent-color);
-  }
-  40% {
-    box-shadow: 0 2em 0 0 var(--accent-color);
-  }
-}
 
 /* *** Start editing below this line *** */
 .container-fluid {
@@ -275,15 +107,12 @@ h1,h2,h3,h4,h5,h6 {
   
 }
 
-/* banner ad */
 .banner-ad {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
 }
-/* .banner-ad.blue {
-  background: #e6f3fb;
-} */
+
 .banner-ad .swiper-pagination {
   bottom: 40px;
   left: 0;
@@ -748,29 +577,27 @@ header {
     justify-content: center;
 }
 
-/* Suave animación */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(5px); }
     100% { opacity: 1; transform: translateY(0); }
 }
-/* Texto del header */
 #promo-text {
-    font-size: 18px;         /* Tamaño de letra */      /* Más gruesa */
+    font-size: 18px;       
     color: VAR(--sublime-guinda);   
-    font-family: 'Garamond';  /* Tono inspirado en tu logo */     /* Más elegante */
+    font-family: 'Garamond'; 
 }
 
 .header-icon-btn{
-    font-size: 18px;         /* Tamaño de letra */
-    font-weight: 300;        /* Más gruesa */
-    font-family: 'Garamond', sans-serif;  /* Puedes cambiarla aquí */
-    color: var(--sublime-guinda);          /* Tono inspirado en tu logo */
+    font-size: 18px;        
+    font-weight: 300;        
+    font-family: 'Garamond', sans-serif;  
+    color: var(--sublime-guinda);         
     letter-spacing: 1px; 
     height:45px;
 }
 
 .btn-banner {
-    background-color: #d94f93;  /* rosa */
+    background-color: #d94f93; 
     color: white;
     border: none;
 }
@@ -784,8 +611,7 @@ header {
     width: 100% !important;
     height: auto !important;
     object-fit: contain;
-    margin-top: 100px; /* BAJA la imagen */
-    /* o si usas transform: */
+    margin-top: 100px; 
     transform: scale(1.1);
 }
 
@@ -832,24 +658,25 @@ header {
     filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.1));
 }
 
-/* --- Hace que TODAS las tarjetas midan lo mismo --- */
+
 .product-item {
     background: #ffffff;
     border-radius: 14px;
-    padding: 20px;
-    height: 100%; /* CLAVE: fuerza a que todas midan lo mismo */
+    padding: 30px;
+    height: 100%;
+    margin-bottom: 30px; 
+    
     
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* empuja el botón hacia abajo */
+    justify-content: space-between; 
 }
 
-/* Contenedor de la imagen */
 .product-item figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 220px;  /* AJUSTA si quieres imágenes más grandes o pequeñas */
+    height: 220px; 
     margin: 0 0 15px 0;
 }
 
@@ -875,4 +702,30 @@ header {
 .product-item .btn {
     margin-top: auto; /* BAJA el botón al fondo de la tarjeta */
 }
+/* ===== FIX FINAL REAL ===== */
+@media (max-width: 768px) {
 
+    /* el texto debe ocupar todo el ancho */
+    .banner-content .content-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+
+    /* imagen del pseudo-elemento más pequeña y abajo */
+    .fenty-banner::after,
+    .chart-banner::after {
+        width: 60% !important;
+        height: 35% !important;
+        top: auto !important;
+        bottom: 10px !important;
+        right: 50% !important;
+        transform: translateX(50%) !important;
+        background-size: contain !important;
+    }
+
+    /* espacio extra debajo para que no la tape */
+    .banner-ad {
+        padding-bottom: 180px !important;
+    }
+}
