@@ -41,6 +41,11 @@ body {
   --bs-info-rgb: 247,207,234;
 }
 
+/* Sobrescribiendo el color de fondo de bg-success */
+.bg-success {
+    background-color: var(--sublime-rosa-claro) !important; /* Nuevo color personalizado */
+}
+
 /* BOTONES */
 .btn-primary {
   --bs-btn-bg: var(--sublime-rosa);
@@ -728,4 +733,45 @@ header {
     .banner-ad {
         padding-bottom: 180px !important;
     }
+}
+/* Estilo para limitar el ancho del carrito */
+.carrito-container {
+    max-width: 900px;  /* Limita el ancho máximo */
+    margin: 0 auto;    /* Centra el contenedor */
+}
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px; /* Esto agrega espacio entre las filas */
+}
+
+th, td {
+    padding: 12px 15px; /* Espacio dentro de cada celda */
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f8f9fa; /* Fondo claro para las cabeceras */
+    color: #6c757d; /* Color de texto para las cabeceras */
+}
+
+/* Estilo para las filas alternadas */
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Color de fondo alternado */
+}
+
+/* Nueva clase personalizada para el fondo */
+.bg-custom {
+    background-color: #ff5733; /* Tu color personalizado */
+    color: white; /* Si también quieres cambiar el color del texto */
+}
+
+.btn-no-border {
+    border: none !important; /* Elimina el borde */
+    outline: none;           /* Elimina el contorno que aparece al hacer clic */
+}
+.texto-blanco {
+    color: white !important;
 }

@@ -35,7 +35,7 @@ include("conexion.php");
                                             <div class="categories my-3">NUEVO</div>
                                             <h3 class="display-4">Born This Way Foundation</h3>
                                             <p>Acabado natural con cobertura media-alta. Elige tu tono ideal.</p>
-                                            <a href="agregar_carrito.php?id=10" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
+                                            <a href="agregar_carrito.php?id=10&cantidad=1" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/bornthisway.png">
@@ -49,7 +49,7 @@ include("conexion.php");
                                             <div class="categories my-3">TENDENCIA</div>
                                             <h3 class="display-4">Rare Beauty Soft Pinch Blush</h3>
                                             <p>El rubor líquido más viral. Natural, pigmentado y duradero.</p>
-                                            <a href="marca.php?nombre=Rare%20Beauty" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Ver marca</a>
+                                            <a href="agregar_carrito.php?id=15&cantidad=1" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
                                             <img src="images/softpinch.png">
@@ -63,10 +63,10 @@ include("conexion.php");
                                             <div class="categories my-3">COLECCIÓN</div>
                                             <h3 class="display-4">Paletas Huda Beauty</h3>
                                             <p>Sombras altamente pigmentadas para cualquier look.</p>
-                                            <a href="categoria.php?tipo=Sombras" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Explorar sombras</a>
+                                            <a href="agregar_carrito.php?id=38&cantidad=1" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
                                         </div>
                                         <div class="img-wrapper col-md-5">
-                                            <img src="images/wildhuda.png">
+                                            <img src="images/husha.png">
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@ include("conexion.php");
                     </figure>
                     <h3><?php echo $producto['nombre_producto']; ?></h3>
                     <span class="price">$<?php echo number_format($producto['precio'], 2); ?></span>
-                    <a href="agregar_carrito.php?id=<?php echo $producto['id_producto']; ?>" class="btn btn-dark w-100 mt-2">
+                    <a href="agregar_carrito.php?id=<?php echo $producto['id_producto']; ?>&cantidad=1" class="btn btn-dark w-100 mt-2">
                         Agregar al carrito
                     </a>
                 </div>

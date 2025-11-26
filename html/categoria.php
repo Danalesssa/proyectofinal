@@ -30,7 +30,7 @@ $resultado = $conexion->query($query);
                     </figure>
                     <h3><?= $producto['nombre_producto'] ?></h3>
                     <span class="price">$<?= number_format($producto['precio'], 2) ?></span>
-                    <a href="agregar_carrito.php?id=<?= $producto['id_producto'] ?>"
+                    <a href="agregar_carrito.php?id=<?= $producto['id_producto'] ?>&cantidad=1"
                     class="btn btn-dark w-100 mt-2">Agregar al carrito</a>
                 </div>
             </div>

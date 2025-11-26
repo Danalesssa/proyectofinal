@@ -10,9 +10,9 @@ if (session_status() === PHP_SESSION_NONE) {
             <a href="index.php" class="d-flex align-items-center text-decoration-none">
                 <img src="images/logo.png">
             </a>
-            <form class="flex-grow-1 mx-3 header-search">
+            <form class="flex-grow-1 mx-3 header-search" method="GET" action="buscar.php">
                 <div class="input-group">
-                    <input type="search" class="form-control" placeholder="Buscar productos...">
+                    <input type="text" name="buscar" class="form-control" placeholder="Buscar productos...">
                     <button class="btn buscar-btn">Buscar</button>
                 </div>
             </form>
@@ -29,13 +29,15 @@ if (session_status() === PHP_SESSION_NONE) {
                     <a href="login.php" class="header-icon-btn d-flex align-items-center justify-content-center">
                         <span class="ms-2">Iniciar sesión</span>
                     </a>
-                <?php endif; ?>
-                <a href="favoritos.php" class="header-icon-btn d-flex align-items-center justify-content-center">
-                    <img src="images/corazon.png" class="header-icon">
+                    <a href="registro.php" class="header-icon-btn d-flex align-items-center justify-content-center">
+                    <span class="ms-2">Registrarse</span>
                 </a>
+                
+                <?php endif; ?>
                 <a href="carrito.php" class="header-icon-btn d-flex align-items-center justify-content-center">
                     <img src="images/carrito.png" class="header-icon">
                 </a>
+                
             </div>
         </div>
     </div>
