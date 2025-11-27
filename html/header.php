@@ -17,7 +17,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
             </form>
             <div class="header-center">
-                <span id="promo-text">10% DE DESCUENTO EN TU PRIMERA COMPRA</span>
+                <span id="promo-text">ENVÍOS A TODO MÉXICO</span>
             </div>
 
             <div class="d-flex align-items-center gap-2">
@@ -72,8 +72,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <script>
 const frases = [
-    "10% DE DESCUENTO EN TU PRIMERA COMPRA",
-    "REGALO EN COMPRAS MAYORES A $999",
     "ENVÍOS A TODO MÉXICO",
     "NUEVAS COLECCIONES CADA SEMANA",
     "PRODUCTOS 100% ORIGINALES"
