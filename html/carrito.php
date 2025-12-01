@@ -161,11 +161,11 @@ $conexion->close();
             <h3>Total: $<?php echo number_format($total, 2); ?></h3>
 
             <div class="d-flex gap-2">
-                <form method="POST" action="carrito.php" class="mt-3">
+                <form method="POST" action="carrito.php" class="mt-3 mb-5">
                     <button type="submit" name="vaciar_carrito" class="btn btn-dark">Vaciar carrito</button>
                 </form>
 
-                <form method="POST" action="checkout.php" class="mt-3">
+                <form method="POST" action="checkout.php" class="mt-3 mb-5">
                     <button type="submit" class="btn btn-dark">Completar compra</button>
                 </form>
             </div>
