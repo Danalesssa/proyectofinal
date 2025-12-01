@@ -116,7 +116,7 @@ $conexion->close();
 
         <div class="card mb-4" style="max-width: 600px;">
             <div class="card-header bg-primary text-white">Los productos que elegiste:</div>
-            <div class="card-body">
+            <div class="card-body table-responsive">
                 <?php if (isset($result) && $result->num_rows > 0): ?>
                     <table class="table mt-3">
                         <thead>

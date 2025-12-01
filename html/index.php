@@ -42,39 +42,9 @@ include("conexion.php");
                                         </div>
                                     </div>
                                 </div>
-                                <!-- slide2 -->
-                                <div class="swiper-slide">
-                                    <div class="row banner-content p-5">
-                                        <div class="col-md-7">
-                                            <div class="categories my-3">TENDENCIA</div>
-                                            <h3 class="display-4">Rare Beauty Soft Pinch Blush</h3>
-                                            <p>El rubor líquido más viral. Natural, pigmentado y duradero.</p>
-                                            <a href="agregar_carrito.php?id=15&cantidad=1" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
-                                        </div>
-                                        <div class="img-wrapper col-md-5">
-                                            <img src="images/softpinch.png">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- slide3 -->
-                                <div class="swiper-slide">
-                                    <div class="row banner-content p-5">
-                                        <div class="col-md-7">
-                                            <div class="categories my-3">COLECCIÓN</div>
-                                            <h3 class="display-4">Paletas Huda Beauty</h3>
-                                            <p>Sombras altamente pigmentadas para cualquier look.</p>
-                                            <a href="agregar_carrito.php?id=38&cantidad=1" class="btn btn-banner text-uppercase rounded-1 px-4 py-3 mt-3">Comprar ahora</a>
-                                        </div>
-                                        <div class="img-wrapper col-md-5">
-                                            <img src="images/husha.png">
-                                        </div>
-                                    </div>
-                                </div>
                             </div> 
-                            <div class="swiper-pagination"></div>
                         </div> 
                     </div> 
-
 
                     <!--banner2-->
                     <div class="banner-ad bg-success-subtle block-2 fenty-banner">

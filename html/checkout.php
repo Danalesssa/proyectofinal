@@ -83,9 +83,9 @@ include("header.php");
 </head>
 <body>
 
-<h1 class="py-3 px-4">Completar Compra</h1>
+<h1 class="py-3 px-2">Completar Compra</h1>
 
-<div class="container">
+<div class="container table-responsive">
     <h3>Detalles de tu pedido</h3>
     <p><strong>Nombre:</strong> <?php echo $datos_usuario['nombre'] . " " . $datos_usuario['apellido']; ?></p>
     <p><strong>Dirección:</strong> <?php echo $datos_usuario['direccion']; ?></p>

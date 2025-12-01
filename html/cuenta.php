@@ -61,7 +61,7 @@ include("header.php");
 
     <div class="card mb-4"  style="max-width: 600px;">
         <div class="card-header bg-primary text-white">Historial de compras</div>
-        <div class="card-body">
+        <div class="card-body table-responsive">
 
             <?php if ($datos_compras->num_rows > 0): ?>
                 <table class="table">
